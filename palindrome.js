@@ -1,16 +1,15 @@
-
 // Adds `reverse` to all strings.
 String.prototype.reverse = function() {
   return Array.from(this).reverse().join("");
 }
 
-String.prototype.blank = function() {
-	return !!this.match(/^\s*$/g) || this === "";
-}
-
-Array.prototype.last = function() {
-	return this.slice(-1);
-}
+// String.prototype.blank = function() {
+// 	return !!this.match(/^\s*$/g) || this === "";
+// }
+//
+// Array.prototype.last = function() {
+// 	return this.slice(-1);
+// }
 
 // Defines a Phrase object.
 function Phrase(content) {
@@ -27,15 +26,15 @@ function Phrase(content) {
   }
 }
 
-// TranslatedPhrase object
-function TranslatedPhrase(content, translation) {
-	this.content = content;
-	this.translation = translation;
-	this.processedContent = function processedContent() {
-		return processor(this.translation);
-	}
-}
-
-TranslatedPhrase.prototype = new Phrase();
+// // TranslatedPhrase object
+// function TranslatedPhrase(content, translation) {
+// 	this.content = content;
+// 	this.translation = translation;
+// 	this.processedContent = function processedContent() {
+// 		return processor(this.translation);
+// 	}
+// }
+//
+// TranslatedPhrase.prototype = new Phrase();
 
 
